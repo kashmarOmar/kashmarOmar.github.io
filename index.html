@@ -37,6 +37,19 @@
 			#footer .icons, #footer .copyright { text-align: center; }
 			#header { background-image: url("assets/css/images/overlay.png"), url("images/bg_robots.png"); }
 			#header { background-attachment: scroll, scroll; background-size: auto, cover; background-position: top left, center bottom; }
+			/* ---- responsive: logos/icons scale with their column; entries stack on phones ---- */
+			.logo img { max-width: min(90px, 100%) !important; height: auto; }
+			@media screen and (max-width: 736px) {
+				#main .row > .col-2, #main .row > .col-10 { width: 100% !important; }
+				#main .row > .col-2 { padding-bottom: 0; }
+				#main .image.fit.logo { margin-bottom: 0; }
+				#main .row > .col-10 { padding-top: 0.7em !important; }
+				#header .container { margin-top: 1.5em; }
+				#main .logo img { max-width: 64px !important; max-height: 64px; margin: 0; }
+				#main .proj-icon { text-align: left; font-size: 2em; margin-top: 0; }
+				#header .menu-item { width: 50% !important; }
+				#header .menu-item a { font-size: 0.9em; }
+			}
 			#header .tagline { color: rgba(255,255,255,0.6); font-size: 1.05em; line-height: 1.5; margin: 0.6em 0 0 0; }
 			.service .proofline { line-height: 1.5; }
 			#header .cta { margin-top: 1.2em; }
